@@ -1,0 +1,10 @@
+.header {
+    color: green;
+    background-color: #effd30;
+    font-size: 40px;
+}
+.child {
+    color: rgb(255, 67, 9);
+    background-color: #30fda8;
+    font-size: 30px;
+}
