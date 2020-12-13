@@ -9,8 +9,12 @@ class ChildGreeting extends Component {
     }
 
     render() {
+        console.log('props', this.props);
         return (
-            <div className={`child`} >I am Child</div>
+            <div className={`child`} >
+                I am Child my org is {this.props.org}
+                {this.props.children}
+            </div>
         )
     }
 }
