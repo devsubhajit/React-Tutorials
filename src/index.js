@@ -2,9 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import AppStyle from './AppStyle'
-import AppForms from './AppForms'
-import AppLC from './AppLC'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
