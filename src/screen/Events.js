@@ -4,7 +4,8 @@ class Events extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            greet: 'Hello'
+            greet: 'Hello',
+            x:'red'
         }
     }
 
@@ -17,18 +18,22 @@ class Events extends Component {
         this.setState({
             greet: 'Namaskaram'
         })
+        // document.getElementById('x').style.backgroundColor = 'red';
     }
 
     render() {
+        console.log(this.props)
         return (
-            <div>
+            <div id="x">
+                <p>{this.props.myvalue}</p>
+                <p>{this.props.myobj.id} : {this.props.myobj.value}</p>
                 <h1>{this.state.greet}</h1>
-
                 <input type="text" value={this.state.greet}  onChange={(e)=> this.setState({greet:e.target.value})}/>
                 {/* <button type="button" onClick={()=> this.state.greet == 'Hello' ?  this.setState({greet:'Hola'}) :  this.setState({greet:'Hello'})}>Change Greeting</button> */}
                 <button type="button" onClick={this.changeGreetOne}>Change Greeting</button>
                 <label htmlFor="myid">Click here </label><br />
                 <button id="myid" type="button" onClick={() => this.changeGreet()}>Change Greeting</button>
+                {this.props.children}
             </div>
         )
     }
